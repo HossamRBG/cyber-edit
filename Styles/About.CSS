@@ -1,0 +1,419 @@
+body {
+  font-family: 'Bree Serif', serif;
+}
+
+// <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 300 to 900
+
+.rubik-<uniquifier> {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0; /* Adjusted to open from the right */
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s cubic-bezier(0.01, 0.51, 0.99, 0.6);
+  padding-top: 60px;
+  z-index: 999;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.content {
+  margin-right: 0; /* Adjusted to accommodate sidebar */
+  transition: margin-right 0.5s;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  padding: 10px 15px;
+  position: fixed;
+  top: 10px;
+  right: 10px; /* Adjusted to align with right edge */
+  z-index: 9999;
+  background-color: transparent;
+  color: white;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #333;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile p {
+  margin: 0;
+  color: white;
+  font-weight: bold;
+}
+
+/* New styles for social links */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: -22px;
+  margin-inline: -6px;
+}
+
+.top-bar {
+  background-color: #000;
+  color: #000;
+  position: fixed;
+  top: 15px;
+  left: 400px;
+  right: 400px;
+  z-index: 9999; /* Ensure it's above other content */
+  padding: 15px 46px;
+  border-radius: 40px;
+  transition: top 0.5s cubic-bezier(0.71, 0.01, 0.4, 0.99); /* Add transition for smooth sliding */
+}
+
+.top-bar.visible {
+    top: 0; /* Slide the top bar down to its place */
+}
+
+.top-bar li {
+  margin-bottom: 30px;
+}
+
+.logo {
+  height: 30px;
+  width: 100px;
+}
+
+.logo-1 {
+  margin-top: -3px;
+  margin-left: -12px;
+  height: 70px;
+  width: 70px;
+}
+
+.navigation {
+  margin-left: 135px;
+  margin-top: -24px;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  display: inline-block;
+  margin-right: 81px;
+  font-size: 40px;
+}
+
+.navigation ul li:last-child {
+  margin-right: 0;
+}
+
+.navigation ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navigation ul li a.active {
+  font-weight: 600;
+  /* Add any other styles to highlight the active link */
+}
+
+.shining-3 {
+  animation: shine 2s infinite;
+  color: inherit; /* Use the color inherited from the parent */
+  text-decoration: none; /* Remove the underline */
+}
+
+@keyframes shine {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Initial shadow */
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Intermediate shadow */
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Final shadow */
+  }
+}
+
+.user-section {
+  margin-top: -91px;
+  margin-left: -225px;
+}
+
+.user-section a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1111px;
+  margin-top: 25px;
+  margin-right: 0px;
+  font-family: 'Bree Serif', serif;
+}
+
+.user-section li {
+  margin-top: -51px;
+  margin-right: 0px;
+  margin-left: 261px;
+}
+
+.user-section a.login {
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-top: -11px;
+  margin-bottom: 0px;
+}
+
+.login {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.user-section a.signup {
+  background-color: #fff;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.signup {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.container {
+  text-align: center;
+  margin-top: -941px;
+}
+
+.container p {
+  color: white;
+}
+
+.scroll-fade-text {
+    text-align: center;
+    transition: opacity 0.3s ease; /* Opacity transition */
+}
+
+/* Styles for the video container */
+.video-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -99999;
+}
+
+/* Styles for the video */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#bg-video2 {
+  width: 60%;
+  height: 60%;
+  border-radius: 30px;
+  transition: opacity 1s; /* Define transition for opacity */
+  margin-left: 0px;
+}
+
+.fade-out {
+  opacity: 0; /* Fade out the video */
+}
+
+#prev-video {
+  position: absolute;
+  margin-left: -1380px;
+  margin-top: 300px;
+  font-family: 'Bree Serif', serif;
+  font-size: 50px;
+  color: white;
+  background-color: black;
+  border: 0px;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-inline: 30px;
+}
+
+#next-video {
+  position: absolute;
+  margin-left: 17px;
+  margin-top: 300px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 50px;
+  color: white;
+  background-color: transparent;
+  border: 0px;
+  font-weight: 600;
+  background-color: black;
+  border: 0px;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-inline: 30px;
+}
+
+footer {
+  position: relative;
+  z-index: -10;
+  margin-top: 66px;
+}
+
+.video-container1 {
+  position: absolute;
+  top: -20;
+  left: -11px;
+  width: 101%;
+  height: 125%;
+  overflow: hidden;
+}
+
+.video-container1 video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.bottom-section {
+  position: relative;
+  z-index: 1; /* Ensure the content appears above the video */
+  display: flex;
+  justify-content: space-between;
+  max-width: 1550px;
+  margin: 0 auto;
+  padding: 30px;
+  color: white; /* Adjust text color for better visibility */
+}
+
+.contact, .links {
+  flex: 1;
+  font-size: 70px;
+}
+
+.contact h2, .links h2 {
+  font-size: 3rem;
+  margin-bottom: 41px;
+  font-family: 'Bree Serif', serif;
+}
+
+.contact p {
+  margin: 63px 0;
+  font-family: 'Bree Serif', serif;
+}
+
+.Social {
+  margin-left: -35px;
+}
+
+.Youtube {
+  margin-top: -50px;
+  margin-left: -1000px;
+  width: 80px;
+  height: 80px;
+}
+
+.Facebook {
+  margin-top: -50px;
+  width: 80px;
+  height: 80px;
+}
+
+.Instagram {
+  margin-top: 425px;
+  width: 80px;
+  height: 80px;
+}
+
+.X {
+  margin-top: 100px;
+  width: 80px;
+  height: 80px;
+}
+
+.links {
+  margin-left: 100px;
+}
+
+.links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.links li {
+  margin-top: -6px;
+  margin-bottom: 5px;
+  font-size: 60px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.copyright {
+    background-color: black; /* Background color of the footer */
+    color: #fff; /* Text color of the footer */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Align text to the center */
+    width: 101%; /* Make the footer span the full width of the viewport */
+    bottom: -117px; /* Position the footer at the bottom of the viewport */
+    left: -11px;
+    margin-top: 0px;
+}
+
+.mark {
+    max-width: 1200px; /* Limit the maximum width of the footer content */
+    margin: 0 auto; /* Center the footer content horizontally */
+}
+
+.copyright p {
+    margin: 0; /* Remove default margin for paragraphs */
+    font-family: 'Bree Serif', serif;
+}

@@ -1,0 +1,262 @@
+body {
+  font-family: 'Bree Serif', serif;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.top-bar {
+background-color: #000;
+color: #000;
+position: fixed;
+top: 15px;
+left: 400px;
+right: 400px;
+z-index: 9999; /* Ensure it's above other content */
+padding: 15px 46px;
+border-radius: 40px;
+transition: top 0.5s cubic-bezier(0.71, 0.01, 0.4, 0.99); /* Add transition for smooth sliding */
+}
+
+.top-bar li {
+margin-bottom: 30px;
+}
+
+.logo {
+height: 30px;
+width: 100px;
+}
+
+.logo-1 {
+margin-top: -3px;
+margin-left: -12px;
+height: 70px;
+width: 70px;
+}
+
+.navigation {
+margin-left: 135px;
+margin-top: -24px;
+}
+
+.navigation ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.navigation ul li {
+display: inline-block;
+margin-right: 81px;
+font-size: 40px;
+}
+
+.navigation ul li:last-child {
+margin-right: 0;
+}
+
+.navigation ul li a {
+color: #fff;
+text-decoration: none;
+}
+
+.navigation ul li a.active {
+font-weight: 600;
+/* Add any other styles to highlight the active link */
+}
+
+.shining-3 {
+animation: shine 2s infinite;
+color: inherit; /* Use the color inherited from the parent */
+text-decoration: none; /* Remove the underline */
+}
+
+.user-section {
+margin-top: -91px;
+margin-left: -225px;
+}
+
+.user-section a {
+color: #fff;
+text-decoration: none;
+margin-left: 1111px;
+margin-top: 25px;
+margin-right: 0px;
+font-family: 'Bree Serif', serif;
+}
+
+.user-section li {
+margin-top: -51px;
+margin-right: 0px;
+margin-left: 261px;
+}
+
+.user-section a.login {
+border: 1px solid #fff;
+padding: 5px 10px;
+border-radius: 15px;
+margin-top: -11px;
+margin-bottom: 0px;
+}
+
+.login {
+margin-top: 0px;
+margin-bottom: 0px;
+}
+
+.user-section a.signup {
+background-color: #fff;
+color: #333;
+padding: 5px 10px;
+border-radius: 15px;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+
+.signup {
+margin-top: 0px;
+margin-bottom: 0px;
+}
+
+.header {font-size: 50px;margin-top: -78px;}
+
+.blur-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 105%;
+  background-image: url('https://images.unsplash.com/photo-1618329027137-a520b57c6606?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWRpdGluZyUyMHZpZGVvfGVufDB8fDB8fHww'); /* Replace 'background-image.jpg' with the path to your image */
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px); /* Adjust the blur intensity as needed */
+  z-index: -1; /* Ensure it's behind other content */
+  margin-top: -14px;
+  margin-left: -50px;
+}
+
+.container {
+  text-align: center;
+  margin-top: -35px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  left: 500px;
+  right: 500px;
+  padding-bottom: 10px;
+  top: 40px;
+  border-radius: 30px;
+}
+
+#signup-form {
+  margin-top: -52px;
+  font-size: 50px;
+}
+
+.form-group {
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#agree {
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: -60px;
+}
+
+#agree-box {
+  margin-left: -353px;
+  margin-top: 33px;
+  position: absolute;
+  height: 21px;
+}
+
+.terms {
+  text-decoration: none;
+  text-decoration-color: black;
+}
+
+input {
+  width: 500px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 3px solid #ccc;
+  font-size: 16px;
+}
+
+.sign-up{
+  font-family: 'Bree Serif', serif;
+  text-decoration: none;
+  font-size: 50px;
+  background-color: #7f7f7f;
+  border: 0;
+  border-radius: 30px;
+  padding: 15px 30px;
+  transition: background-color 0.5s ease;
+  color: white;
+  margin-top: 72px;
+}
+
+.social-login {margin-top: 7px;}
+
+.google {
+  font-family: 'Bree Serif', serif;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: #7f7f7f;
+  border: 0;
+  border-radius: 30px;
+  padding: 15px 30px;
+  transition: background-color 0.5s ease;
+  color: white;
+  padding-left: 70px;
+}
+
+.apple {
+  font-family: 'Bree Serif', serif;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: #7f7f7f;
+  border: 0;
+  border-radius: 30px;
+  padding: 15px 30px;
+  transition: background-color 0.5s ease;
+  color: white;
+  padding-left: 50px;
+}
+
+.google-logo {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 108px;
+  top: 810px;
+  transform: translateY(-50%);
+  margin-right: 10px;
+}
+
+.apple-logo {width: 32.56px;height: 40px;position: absolute;left: 492px;top: 806px;transform: translateY(-50%);margin-right: 10px;color: white;filter: invert(100%); /* Invert the colors to make it white */}
+
+button:hover {
+  background-color: black;
+}
+
+.log-in {
+  text-align: center;
+  font-family: 'Bree Serif', serif;
+  margin-top: 2px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.login {
+  color: #616161;
+  text-decoration: none;
+}

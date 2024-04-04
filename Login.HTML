@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Styles\Login.css">
+</head>
+<body>
+  <header id="top-bar" class="top-bar">
+    <div class="logo">
+      <a><img href="Welcome.HTML" src="Images\logo 2.png" class="logo-1"></a>
+    </div>
+    <nav class="navigation">
+      <ul>
+        <li><a href="Welcome.HTML" class="nav-link" data-target="home">Home</a></li>
+        <li><a href="Plans.HTML" class="nav-link" data-target="plans">Plans</a></li>
+        <li><a href="About.HTML" class="shining-3" class="nav-link" data-target="about">About</a></li>
+        <li><a href="mailto:hossamabdulatif123@gmail.com" class="nav-link" data-target="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="user-section">
+      <a href="Login.HTML" class="login">Login</a>
+      <li></li>
+      <a href="Sign up.HTML" class="signup">Sign Up</a>
+    </div>
+  </header>
+  <div class="blur-bg"></div>
+    <div class="container">
+        <form id="login-form">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <div class="social-login">
+            <a href="#" id="google-login" class="google-login-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png" alt="Google Logo" class="google-logo">
+                Continue with Google
+            </a>
+          <a href="#" id="apple-login" class="apple-login-btn">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo" class="apple-logo">
+              Continue with Apple
+          </a>
+      </div>
+      <div class="log-in2">
+        <a>Don't have an account? <a class="login2" href="Sign up.HTML">Sign Up</a></a>
+      </div>
+    </div>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+    <script>
+      AppleID.auth.init({
+          clientId : '[YOUR_CLIENT_ID]',
+          scope : 'email',
+          redirectURI: '[YOUR_REDIRECT_URI]', // Optional
+          state: '[YOUR_STATE]', // Optional
+          nonce: '[YOUR_NONCE]', // Optional
+          usePopup : true // Optional
+      });
+  </script>
+  
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do something with the user's Google ID
+            console.log('Name: ' + profile.getName()); // Do something with the user's name
+            console.log('Email: ' + profile.getEmail()); // Do something with the user's email
+            // You can send this information to your server for authentication
+        }
+    </script>
+</body>
+<script src="Animation\Login.js"></script>
+</html>

@@ -1,0 +1,722 @@
+body {
+  font-family: 'Bree Serif', serif;
+}
+
+// <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 300 to 900
+
+.rubik-<uniquifier> {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0; /* Adjusted to open from the right */
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s cubic-bezier(0.01, 0.51, 0.99, 0.6);
+  padding-top: 60px;
+  z-index: 999;
+}
+
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.content {
+  margin-right: 0; /* Adjusted to accommodate sidebar */
+  transition: margin-right 0.5s;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  padding: 10px 15px;
+  position: fixed;
+  top: 10px;
+  right: 10px; /* Adjusted to align with right edge */
+  z-index: 9999;
+  background-color: transparent;
+  color: white;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #333;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile p {
+  margin: 0;
+  color: white;
+  font-weight: bold;
+}
+
+/* New styles for social links */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: -22px;
+  margin-inline: -6px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease; /* Smooth transition for scaling */
+  position: absolute; /* Position the image relative to its container */
+  top: 0; /* Align the image to the top of its container */
+  left: 0; /* Align the image to the left of its container */
+}
+
+.scroll-down {
+  transform: scale(1.2); /* Increase size when scrolling down */
+}
+
+.welcome img {
+    width: 1923px; /* Make the image fill the container horizontally */
+    height: 1081px; /* Make the image fill the container vertically */
+    top: -5px; /* Adjust top position */
+    left: -20px; /* Adjust left position */
+    filter: blur(5px); /* Adjust the blur radius as needed */
+    transition: transform 0.3s ease;
+    z-index: -1; /* Push the video back */
+    /* position: absolute; */
+}
+
+.welcome-text {
+    font-size: 120px;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    color: white;
+    display: block;
+    text-align: center;
+}
+
+#scrollText {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.scendary-text {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Bree Serif', serif;
+    font-weight: lighter;
+    color: black;
+    display: block;
+    text-align: center;
+}
+
+.shining {
+  text-align: center;
+  font-size: 60px;
+  font-family: 'Bree Serif', serif;
+  font-weight: lighter;
+  color: white;
+  text-align: center;
+  position: relative;
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Initial shadow */
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Intermediate shadow */
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Final shadow */
+  }
+}
+
+#bg-video2 {
+  width: 60%;
+  border-radius: 30px;
+  transition: opacity 1s; /* Define transition for opacity */
+  margin-left: 390px;
+  margin-top: -114px;
+}
+
+.fade-out {
+  opacity: 0; /* Fade out the video */
+}
+
+#prev-video {
+  position: absolute;
+  margin-left: -1380px;
+  margin-top: 150px;
+  font-family: 'Bree Serif', serif;
+  font-size: 50px;
+  color: white;
+  background-color: black;
+  border: 0px;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-inline: 30px;
+}
+
+#next-video {
+  position: absolute;
+  margin-left: 17px;
+  margin-top: 150px;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 50px;
+  color: white;
+  background-color: transparent;
+  border: 0px;
+  font-weight: 600;
+  background-color: black;
+  border: 0px;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-inline: 30px;
+}
+
+.features {
+  position: relative;
+}
+
+.Premiere-Pro {
+  position: relative; /* Ensure stacking context */
+  z-index: 2; /* Higher z-index to place it above the background image */
+  display: flex;
+  width: 200px;
+  height: 200px;
+  padding-top: 581px;
+  margin-top: 115px;
+  margin-left: 816px;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.Editing-3 {
+  position: absolute;
+  z-index: 1;
+  width: 960px;
+  height: 540px;
+  margin-left: 882px;
+  margin-top: -671px;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.features-text {
+  font-weight: bold;
+  opacity: 0; /* Initially hide the text */
+  transition: opacity 0.5s ease; /* Smooth transition for fading */
+}
+
+#features-text1{
+  font-weight: bold;
+  font-family: 'Bree Serif', serif;
+  position: absolute;
+  font-size: 60px;
+  font-weight: bold;
+  margin-left: 24px;
+  margin-top: -715px;
+  text-align: left;
+  z-index: 2;
+  display: block;
+  color: white;
+}
+
+#features-text2 {
+  font-weight: bold;
+  font-family: 'Bree Serif', serif;
+  position: absolute;
+  font-size: 60px;
+  font-weight: bold;
+  margin-left: 24px;
+  margin-top: -633px;
+  text-align: left;
+  z-index: 2;
+  display: block;
+  color: white;
+}
+
+#features-text3 {
+  font-weight: bold;
+  font-family: 'Bree Serif', serif;
+  position: absolute;
+  font-size: 75px;
+  font-weight: bold;
+  margin-left: 24px;
+  margin-top: -355px;
+  text-align: left;
+  z-index: 2;
+  color: white;
+}
+
+.block {
+  display: block;
+}
+
+.image-2 {
+  position: absolute;
+  display: flex;
+  width: 101%;
+  height: 1100px;
+  margin-top: -727px;
+  margin-left: -13px;
+  filter: blur(5px);
+  background-image: url('https://www.filmsupply.com/articles/wp-content/uploads/sites/3/2023/02/peter-stumpf-yk9VXp4W5-Q-unsplash-1-1580x650.jpg'); /* URL of the background image */
+  background-size: cover; /* Adjust as needed */
+}
+
+.Plans{
+  margin-top: 74px;
+}
+
+.background-video {
+    position: absolute;
+    /* top: 200%; */ /* Adjust the top position */
+    left: 0%; /* Adjust the left position */
+    width: 100%;
+    height: 119vh;
+}
+
+.Plans h2 {
+  font-size: 40px;
+  margin-bottom: -26px;
+  font-family: 'Bree Serif', serif;
+  z-index: -1;
+ }
+
+#bg-video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Push the video back */
+}
+
+.plans-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.plan {
+    border: 20px solid   #000000;
+    border-radius: 45px;
+    padding: 25px;
+    height: 450px;
+    width: 300px;
+    text-align: center;
+    background-color: #fff;
+    margin: 10px;
+    transform: translateX(-500%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.plan ul li {
+    list-style: none;
+    padding: 5px 0;
+    border-bottom: 2px solid #ccc; /* Add a border between list items */
+}
+
+.reverse {
+    transform: translateX(10%);
+}
+
+.price {
+    font-size: 30px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-family: 'Bree Serif', serif;
+    font-weight: lighter;
+}
+
+.purchase-button {
+    width: 220px; /* Adjust the width of the button */
+    height: 64px; /* Adjust the height of the button */
+    margin-top: -15px; /* Adjust the top margin to position the button */
+    margin-left: 50px;
+    display: block;
+    padding: 0px;
+    background-color: #575757; /* Change button color as needed */
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    font-size: 35px;
+    text-decoration: none; /* Remove underline from links with this class */
+}
+
+.purchase-button:hover {
+    background-color: #000000; /* Change button color on hover */
+}
+
+.send-videos {
+  align-items: center;
+  width: 100%;
+  margin-top: 239px;
+}
+
+.image-3 {
+    margin-top: 932px;
+    margin-left: -11px;
+    align-items: center;
+    height: 1000px;
+    width: 101%;
+    z-index: 1;
+}
+
+.sendanywhere {
+  margin-left: 1159px;
+  margin-top: -827px;
+  width: 600px;
+  transition: width 0.5s ease; /* Add transition for smooth resizing */
+}
+
+.Text-send {
+  font-weight: bold;
+  font-family: 'Bree Serif', serif;
+  position: absolute;
+  font-size: 100px;
+  margin-left: 7px;
+  margin-top: -313px;
+  text-align: left;
+  z-index: 2;
+  display: block;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.black-text {
+  color: rgb(255, 255, 255);
+}
+
+.shining-2 {
+  font-size: 100px;
+  font-family: 'Bree Serif', serif;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  animation: shine 2s infinite;
+  color: inherit; /* Use the color inherited from the parent */
+  text-decoration: none; /* Remove the underline */
+}
+
+@keyframes shine {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Initial shadow */
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Intermediate shadow */
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Final shadow */
+  }
+}
+
+#fade-effect {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.bottom-vid {
+  margin-left: 50%;
+  margin-top: 100%;
+  width: 100%;
+  height: auto; /* Maintain the aspect ratio */
+}
+
+footer {
+  position: relative;
+  margin-top: 20px;
+}
+
+.video-container {
+  position: absolute;
+  top: -20;
+  left: -11px;
+  width: 101%;
+  height: 125%;
+  overflow: hidden;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.bottom-section {
+  position: relative;
+  z-index: 1; /* Ensure the content appears above the video */
+  display: flex;
+  justify-content: space-between;
+  max-width: 1550px;
+  margin: 0 auto;
+  padding: 30px;
+  color: white; /* Adjust text color for better visibility */
+}
+
+.contact, .links {
+  flex: 1;
+  font-size: 70px;
+}
+
+.contact h2, .links h2 {
+  font-size: 3rem;
+  margin-bottom: 41px;
+  font-family: 'Bree Serif', serif;
+}
+
+.contact p {
+  margin: 63px 0;
+  font-family: 'Bree Serif', serif;
+}
+
+.Social {
+  margin-left: -35px;
+  pointer-events: all;
+}
+
+.Youtube {
+  margin-top: -50px;
+  margin-left: -1000px;
+  width: 80px;
+  height: 80px;
+}
+
+.Facebook {
+  margin-top: -50px;
+  width: 80px;
+  height: 80px;
+}
+
+.Instagram {
+  margin-top: 425px;
+  width: 80px;
+  height: 80px;
+}
+
+.X {
+  margin-top: 100px;
+  width: 80px;
+  height: 80px;
+}
+
+.links {
+  margin-left: 100px;
+}
+
+.links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.links li {
+  margin-top: -6px;
+  margin-bottom: 5px;
+  font-size: 60px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.top-bar {
+  background-color: #000;
+  color: #000;
+  position: fixed;
+  top: 15px;
+  left: 400px;
+  right: 400px;
+  z-index: 9999; /* Ensure it's above other content */
+  padding: 15px 46px;
+  border-radius: 40px;
+  transition: top 0.5s cubic-bezier(0.71, 0.01, 0.4, 0.99); /* Add transition for smooth sliding */
+}
+
+.top-bar li {
+  margin-bottom: 30px;
+}
+
+.logo {
+  height: 30px;
+  width: 100px;
+}
+
+.logo-1 {
+  margin-top: -3px;
+  margin-left: -12px;
+  height: 70px;
+  width: 70px;
+}
+
+.navigation {
+  margin-left: 135px;
+  margin-top: -24px;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  display: inline-block;
+  margin-right: 81px;
+  font-size: 40px;
+}
+
+.navigation ul li:last-child {
+  margin-right: 0;
+}
+
+.navigation ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navigation ul li a.active {
+  font-weight: 600;
+  /* Add any other styles to highlight the active link */
+}
+
+.shining-3 {
+  animation: shine 2s infinite;
+  color: inherit; /* Use the color inherited from the parent */
+  text-decoration: none; /* Remove the underline */
+}
+
+.user-section {
+  margin-top: -91px;
+  margin-left: -225px;
+}
+
+.user-section a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1111px;
+  margin-top: 25px;
+  margin-right: 0px;
+  font-family: 'Bree Serif', serif;
+}
+
+.user-section li {
+  margin-top: -58px;
+  margin-right: 0px;
+  margin-left: 261px;
+}
+
+.user-section a.login {
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-top: -11px;
+  margin-bottom: 0px;
+}
+
+.login {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.user-section a.signup {
+  background-color: #fff;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.signup {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.copyright {
+    background-color: black; /* Background color of the footer */
+    color: #fff; /* Text color of the footer */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Align text to the center */
+    width: 101%; /* Make the footer span the full width of the viewport */
+    bottom: -97px; /* Position the footer at the bottom of the viewport */
+    left: -11px;
+    margin-top: 0px;
+}
+
+.mark {
+    max-width: 1200px; /* Limit the maximum width of the footer content */
+    margin: 0 auto; /* Center the footer content horizontally */
+}
+
+.copyright p {
+    margin: 0; /* Remove default margin for paragraphs */
+    font-family: 'Bree Serif', serif;
+}

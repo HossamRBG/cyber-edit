@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Styles\Sign up.CSS">
+</head>
+<body>
+    <header id="top-bar" class="top-bar">
+      <div class="logo">
+        <a><img href="Welcome.HTML" src="Images\logo 2.png" class="logo-1"></a>
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="Welcome.HTML" class="nav-link" data-target="home">Home</a></li>
+          <li><a href="Plans.HTML" class="nav-link" data-target="plans">Plans</a></li>
+          <li><a href="About.HTML" class="shining-3" class="nav-link" data-target="about">About</a></li>
+          <li><a href="mailto:hossamabdulatif123@gmail.com" class="nav-link" data-target="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="user-section">
+        <a href="Login.HTML" class="login">Login</a>
+        <li></li>
+        <a href="Sign up.HTML" class="signup">Sign Up</a>
+      </div>
+    </header>
+  <div class="blur-bg"></div>
+  <div class="container">
+    <header class="header">
+      <h1>Sign Up</h1>
+    </header>
+      <form id="signup-form">
+          <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required>
+          </div>
+          <label for="agree" id="agree">Agree to <a class="terms" href="Terms and condition.html">terms and conditions</a></label>
+          <input type="checkbox" id="agree-box">
+          <style>
+            /* Style for checkbox */
+            input[type="checkbox"] {
+              /* Add your styling here */
+            }
+          
+            /* Style for label */
+            label {
+              /* Add your styling here */
+            }
+          </style>          
+          <button type="submit" class="sign-up">Sign Up</button>
+      </form>
+      <div class="social-login">
+          <button onclick="continueWithGoogle()" class="google">Continue with Google</button>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png" alt="Google Logo" class="google-logo">
+          <button onclick="continueWithApple()" class="apple">Continue with Apple</button>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple logo" class="apple-logo">
+      </div>
+      <div class="log-in">
+        <a>Already have an account? <a class="login" href="Login.HTML">Log in</a></a>
+      </div>
+  </div>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script>
+    function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+
+      function continueWithGoogle() {
+          // Add Google authentication logic here
+          alert("Continue with Google");
+      }
+
+      function continueWithApple() {
+          // Add Apple authentication logic here
+          alert("Continue with Apple");
+      }
+  </script>
+
+</body>
+<script src="Animation\Sign up.JS"></script>
+</html>
